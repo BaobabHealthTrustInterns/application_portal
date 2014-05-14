@@ -1,0 +1,4 @@
+class AdminUserService < ActiveRecord::Base
+     self.primary_key = "admin_user_id"
+     #self.primary_key = "service_id"
+end

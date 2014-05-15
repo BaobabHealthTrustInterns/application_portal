@@ -520,3 +520,58 @@ Migrating to CreateLocations (20140514094730)
   [1m[35mSQL (2.7ms)[0m  SHOW KEYS FROM `locations`
   [1m[36mSQL (0.7ms)[0m  [1mdescribe `services`[0m
   [1m[35mSQL (0.4ms)[0m  SHOW KEYS FROM `services`
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSCHEMA (0.5ms)[0m  SHOW TABLES 
+  [1m[36mSQL (1.0ms)[0m  [1mdescribe `services`[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO `services` (`service_name`, `url_path`, `created_at`, `updated_at`) VALUES ('BART', 'https\\baobabhealthtrust.com ervicesart', '2014-05-15 20:19:34', '2014-05-15 20:19:34')
+  [1m[36mSQL (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO `services` (`service_name`, `url_path`, `created_at`, `updated_at`) VALUES ('OPD', 'https\\baobabhealthtrust.com ervicesopd', '2014-05-15 20:20:40', '2014-05-15 20:20:40')[0m
+  [1m[35mSQL (1.9ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO `services` (`service_name`, `url_path`, `created_at`, `updated_at`) VALUES ('DASHBOARD', 'https\\baobabhealthtrust.com ervicesdashboard', '2014-05-15 20:21:14', '2014-05-15 20:21:14')
+  [1m[36mSQL (20.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO `services` (`service_name`, `url_path`, `created_at`, `updated_at`) VALUES ('REGISTRATION', 'https\\baobabhealthtrust.com ervices\reg', '2014-05-15 20:21:43', '2014-05-15 20:21:43')[0m
+  [1m[35mSQL (1.9ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO `services` (`service_name`, `url_path`, `created_at`, `updated_at`) VALUES ('ePICS', 'https\\baobabhealthtrust.com ervicespics', '2014-05-15 20:22:21', '2014-05-15 20:22:21')
+  [1m[36mSQL (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO `services` (`service_name`, `url_path`, `created_at`, `updated_at`) VALUES ('HCSA', 'https\\baobabhealthtrust.com erviceshcsa', '2014-05-15 20:22:38', '2014-05-15 20:22:38')[0m
+  [1m[35mSQL (1.9ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.9ms)[0m  INSERT INTO `services` (`service_name`, `url_path`, `created_at`, `updated_at`) VALUES ('RADIOLOGY', 'https\\baobabhealthtrust.com ervices\radiology', '2014-05-15 20:23:26', '2014-05-15 20:23:26')
+  [1m[36mSQL (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.5ms)[0m  [1mINSERT INTO `services` (`service_name`, `url_path`, `created_at`, `updated_at`) VALUES ('BART2', 'https\\baobabhealthtrust.com ervicesart2', '2014-05-15 20:23:50', '2014-05-15 20:23:50')[0m
+  [1m[35mSQL (1.9ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO `services` (`service_name`, `url_path`, `created_at`, `updated_at`) VALUES ('MHTCRS', 'https\\baobabhealthtrust.com ervicesmhtcrs', '2014-05-15 20:27:56', '2014-05-15 20:27:56')
+  [1m[36mSQL (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mService Load (0.7ms)[0m  SELECT `services`.* FROM `services`
+  [1m[36mSCHEMA (0.4ms)[0m  [1mSHOW TABLES [0m
+  [1m[35mSCHEMA (0.3ms)[0m  SHOW TABLES 
+  [1m[36mSQL (2.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSCHEMA (0.3ms)[0m  SHOW TABLES 
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSCHEMA (0.3ms)[0m  SHOW TABLES 
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+Migrating to CreateLocations (20140514094730)
+  [1m[35mSQL (2.6ms)[0m  DROP TABLE `locations`
+  [1m[36mAREL (0.8ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20140514094730'[0m
+Migrating to CreateAdminUsersServices (20140514091639)
+  [1m[35mSQL (1.2ms)[0m  DROP TABLE `admin_users_services`
+  [1m[36mAREL (0.8ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20140514091639'[0m
+Migrating to CreateHitCounts (20140514091544)
+  [1m[35mSQL (1.2ms)[0m  DROP TABLE `hit_counts`
+  [1m[36mAREL (0.6ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20140514091544'[0m
+Migrating to CreateServices (20140514091401)
+  [1m[35mSQL (1.2ms)[0m  DROP TABLE `services`
+  [1m[36mAREL (0.8ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20140514091401'[0m
+Migrating to CreateAdminUsers (20140514091258)
+  [1m[35mSQL (1.4ms)[0m  DROP TABLE `admin_users`
+  [1m[36mAREL (0.7ms)[0m  [1mDELETE FROM `schema_migrations` WHERE `schema_migrations`.`version` = '20140514091258'[0m
+  [1m[35mSCHEMA (0.4ms)[0m  SHOW TABLES 
+  [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
+  [1m[35mSCHEMA (0.2ms)[0m  SHOW TABLES 

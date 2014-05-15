@@ -1,4 +1,6 @@
 ApplicationPortal::Application.routes.draw do
+  get "services/display"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

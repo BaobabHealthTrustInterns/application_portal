@@ -631,3 +631,34 @@ Migrating to CreateAdminUsers (20140514091258)
   [1m[35mSCHEMA (0.4ms)[0m  SHOW TABLES 
   [1m[36mSQL (0.3ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations`[0m
   [1m[35mSCHEMA (0.3ms)[0m  SHOW TABLES 
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSCHEMA (0.5ms)[0m  SHOW TABLES 
+  [1m[36mSQL (0.9ms)[0m  [1mdescribe `services`[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO `services` (`name`, `url_path`, `created_at`, `updated_at`) VALUES ('MHTCRS', 'https\\baobabhealthtrust.com ervicesmhtcrs', '2014-05-15 20:52:05', '2014-05-15 20:52:05')
+  [1m[36mSQL (20.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `services` (`name`, `url_path`, `created_at`, `updated_at`) VALUES ('BART2', 'https\\baobabhealthtrust.com ervicesart2', '2014-05-15 20:52:20', '2014-05-15 20:52:20')[0m
+  [1m[35mSQL (1.8ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `services` (`name`, `url_path`, `created_at`, `updated_at`) VALUES ('RADIOLOGY', 'https\\baobabhealthtrust.com ervices\radiology', '2014-05-15 20:52:32', '2014-05-15 20:52:32')
+  [1m[36mSQL (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO `services` (`name`, `url_path`, `created_at`, `updated_at`) VALUES ('HCSA', 'https\\baobabhealthtrust.com erviceshcsa', '2014-05-15 20:52:47', '2014-05-15 20:52:47')[0m
+  [1m[35mSQL (1.9ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO `services` (`name`, `url_path`, `created_at`, `updated_at`) VALUES ('ePICS', 'https\\baobabhealthtrust.com ervicespics', '2014-05-15 20:53:03', '2014-05-15 20:53:03')
+  [1m[36mSQL (2.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO `services` (`name`, `url_path`, `created_at`, `updated_at`) VALUES ('REGISTRATION', 'https\\baobabhealthtrust.com ervices\reg', '2014-05-15 20:53:20', '2014-05-15 20:53:20')[0m
+  [1m[35mSQL (17.9ms)[0m  COMMIT
+  [1m[36mSQL (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.6ms)[0m  INSERT INTO `services` (`name`, `url_path`, `created_at`, `updated_at`) VALUES ('DASHBOARD', 'https\\baobabhealthtrust.com ervicesdashboard', '2014-05-15 20:53:31', '2014-05-15 20:53:31')
+  [1m[36mSQL (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO `services` (`name`, `url_path`, `created_at`, `updated_at`) VALUES ('OPD', 'https\\baobabhealthtrust.com ervicesopd', '2014-05-15 20:53:44', '2014-05-15 20:53:44')[0m
+  [1m[35mSQL (1.9ms)[0m  COMMIT
+  [1m[36mService Load (0.6ms)[0m  [1mSELECT `services`.* FROM `services`[0m
+  [1m[35mSQL (0.3ms)[0m  BEGIN
+  [1m[36mAREL (0.6ms)[0m  [1mINSERT INTO `services` (`name`, `url_path`, `created_at`, `updated_at`) VALUES ('CLIENTS VOTING', 'https\\baobabhealthtrust.com ervicess', '2014-05-15 20:55:41', '2014-05-15 20:55:41')[0m
+  [1m[35mSQL (1.4ms)[0m  COMMIT
+  [1m[36mService Load (0.6ms)[0m  [1mSELECT `services`.* FROM `services`[0m

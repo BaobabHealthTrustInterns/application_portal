@@ -1,5 +1,29 @@
 ApplicationPortal::Application.routes.draw do
+  get "sample_apps/dashboard"
+
+  get "sample_apps/opd"
+
+  get "sample_apps/cvs"
+
+  get "sample_apps/ipd"
+
+  get "sample_apps/anc"
+
+  get "sample_apps/mhtcrs"
+
+  get "sample_apps/bart2"
+
+  get "sample_apps/radiology"
+
+  get "sample_apps/hcsa"
+
+  get "sample_apps/epics"
+
+  get "sample_apps/registration"
+
   get "services/display"
+
+  get "services/next"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

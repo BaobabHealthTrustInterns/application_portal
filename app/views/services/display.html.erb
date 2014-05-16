@@ -1,2 +1,11 @@
-<h1>Services#display</h1>
-<p>Find me in app/views/services/display.html.erb</p>
+<h1 align="center">Services#display</h1>
+
+<% services = Service.limit(9) %>
+
+<% services.each do |service| %>
+	<p><%= link_to("#{service.name}", "../sample_apps/#{service.url_path}") %></p>
+<% end %>
+
+<% if Service.count > 9 %>
+	<%= link_to("More Services", {:action => "next"}) %>
+<% end %>

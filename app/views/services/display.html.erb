@@ -4,6 +4,7 @@
 
 <% services.each do |service| %>
 	<p><%= link_to("#{service.name}", "../sample_apps/#{service.url_path}") %></p>
+	<p onclick="addCount()"><% link_to("#{service.name}", "#{HitCount.create(:service_id => "#{service.id}")}") %></p>
 <% end %>
 
 <% if Service.count > 9 %>

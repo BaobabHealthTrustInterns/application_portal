@@ -2913,3 +2913,129 @@ Started GET "/sample_apps/ipd" for 127.0.0.1 at 2014-05-16 09:00:39 +0200
 Rendered sample_apps/ipd.html.erb within layouts/application (3.5ms)
 Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
 >>>>>>> addDisplay
+DEPRECATION WARNING: config.action_view.debug_rjs will be removed in 3.1, from 3.1 onwards you will need to install prototype-rails to continue to use RJS templates . (called from service at /home/tambala/.rvm/rubies/ruby-1.9.3-p385/lib/ruby/1.9.1/webrick/httpserver.rb:138)
+
+
+Started GET "/services/display" for 127.0.0.1 at 2014-05-17 10:29:00 +0200
+  Processing by ServicesController#display as HTML
+  [1m[36mService Load (0.5ms)[0m  [1mSELECT `services`.* FROM `services` LIMIT 9[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mSCHEMA (0.3ms)[0m  [1mSHOW TABLES [0m
+  [1m[35mSQL (1.0ms)[0m  describe `hit_counts`
+  [1m[36mAREL (18.1ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (1, '2014-05-17 08:29:01', '2014-05-17 08:29:01')[0m
+  [1m[35mSQL (1.0ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (2, '2014-05-17 08:29:02', '2014-05-17 08:29:02')
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (3, '2014-05-17 08:29:02', '2014-05-17 08:29:02')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (4, '2014-05-17 08:29:02', '2014-05-17 08:29:02')
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (5, '2014-05-17 08:29:02', '2014-05-17 08:29:02')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.5ms)[0m  INSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (6, '2014-05-17 08:29:02', '2014-05-17 08:29:02')
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  BEGIN
+  [1m[36mAREL (0.4ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (7, '2014-05-17 08:29:02', '2014-05-17 08:29:02')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (8, '2014-05-17 08:29:02', '2014-05-17 08:29:02')
+  [1m[36mSQL (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (9, '2014-05-17 08:29:02', '2014-05-17 08:29:02')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mSQL (0.4ms)[0m  [1mSELECT COUNT(*) FROM `services`[0m
+Rendered services/display.html.erb within layouts/application (226.2ms)
+Completed 200 OK in 234ms (Views: 202.8ms | ActiveRecord: 30.4ms)
+
+
+Started GET "/services/next" for 127.0.0.1 at 2014-05-17 10:29:04 +0200
+  Processing by ServicesController#next as HTML
+  [1m[35mService Load (0.5ms)[0m  SELECT `services`.* FROM `services`
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `services`[0m
+Rendered services/next.html.erb within layouts/application (58.9ms)
+Completed 200 OK in 88ms (Views: 86.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/services/display" for 127.0.0.1 at 2014-05-17 10:29:05 +0200
+  Processing by ServicesController#display as HTML
+  [1m[35mService Load (0.2ms)[0m  SELECT `services`.* FROM `services` LIMIT 9
+  [1m[36mSQL (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  describe `hit_counts`
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (1, '2014-05-17 08:29:05', '2014-05-17 08:29:05')[0m
+  [1m[35mSQL (1.8ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (2, '2014-05-17 08:29:05', '2014-05-17 08:29:05')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (3, '2014-05-17 08:29:05', '2014-05-17 08:29:05')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (4, '2014-05-17 08:29:05', '2014-05-17 08:29:05')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (5, '2014-05-17 08:29:05', '2014-05-17 08:29:05')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (6, '2014-05-17 08:29:05', '2014-05-17 08:29:05')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (7, '2014-05-17 08:29:05', '2014-05-17 08:29:05')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (8, '2014-05-17 08:29:05', '2014-05-17 08:29:05')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (9, '2014-05-17 08:29:05', '2014-05-17 08:29:05')[0m
+  [1m[35mSQL (0.4ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM `services`[0m
+Rendered services/display.html.erb within layouts/application (85.9ms)
+Completed 200 OK in 93ms (Views: 81.8ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/services/next" for 127.0.0.1 at 2014-05-17 10:29:08 +0200
+  Processing by ServicesController#next as HTML
+  [1m[35mService Load (0.2ms)[0m  SELECT `services`.* FROM `services`
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `services`[0m
+Rendered services/next.html.erb within layouts/application (61.8ms)
+Completed 200 OK in 68ms (Views: 67.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/services/display" for 127.0.0.1 at 2014-05-17 10:29:09 +0200
+  Processing by ServicesController#display as HTML
+  [1m[35mService Load (0.2ms)[0m  SELECT `services`.* FROM `services` LIMIT 9
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  describe `hit_counts`
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (1, '2014-05-17 08:29:09', '2014-05-17 08:29:09')[0m
+  [1m[35mSQL (1.8ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (2, '2014-05-17 08:29:09', '2014-05-17 08:29:09')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (3, '2014-05-17 08:29:09', '2014-05-17 08:29:09')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (4, '2014-05-17 08:29:09', '2014-05-17 08:29:09')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (5, '2014-05-17 08:29:09', '2014-05-17 08:29:09')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.2ms)[0m  INSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (6, '2014-05-17 08:29:09', '2014-05-17 08:29:09')
+  [1m[36mSQL (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (7, '2014-05-17 08:29:09', '2014-05-17 08:29:09')[0m
+  [1m[35mSQL (0.5ms)[0m  COMMIT
+  [1m[36mSQL (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mAREL (0.4ms)[0m  INSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (8, '2014-05-17 08:29:09', '2014-05-17 08:29:09')
+  [1m[36mSQL (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35mSQL (0.1ms)[0m  BEGIN
+  [1m[36mAREL (0.3ms)[0m  [1mINSERT INTO `hit_counts` (`service_id`, `created_at`, `updated_at`) VALUES (9, '2014-05-17 08:29:09', '2014-05-17 08:29:09')[0m
+  [1m[35mSQL (0.6ms)[0m  COMMIT
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM `services`[0m
+Rendered services/display.html.erb within layouts/application (90.8ms)
+Completed 200 OK in 98ms (Views: 86.7ms | ActiveRecord: 11.0ms)

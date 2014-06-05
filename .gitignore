@@ -8,3 +8,4 @@ config/secrets.yml
 /vendor/bundle
 .rvmrc
 log/development.log
+vendor/*

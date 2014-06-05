@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  facility: MyString
+  district: MyString
+  description: MyString
+
+two:
+  facility: MyString
+  district: MyString
+  description: MyString

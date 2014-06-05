@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>ApplicationPortal</title>
-  <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+	<head>
+  		<title>ApplicationPortal</title>
+  		<%= stylesheet_link_tag :all %>
+ 	 	<%= javascript_include_tag :defaults %>
+  		<%= csrf_meta_tag %>
+	</head>
+	<body>
+		<header>
+			<h1 align="center">KCH EMR PORTAL</h1>
+		</header>
+		<nav>
+			<p><%= link_to('Admin Section' || @linkup_title, { :controller => 'sessions' || @linkup, :action => 'new' || @action })%></p>
+		</nav>
+		<main>
+			<%= yield %>
+		</main>
+		<footer>
+			<p><%= @footer %></p>
+		</footer>
+	</body>
 </html>

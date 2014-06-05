@@ -1,2 +1,21 @@
-<h1>Services#list</h1>
-<p>Find me in app/views/services/list.html.erb</p>
+<table border=0 width=250 style='table-layout:fixed'>
+	</br>
+	<h2 style="margin-left: 50px;">SELECT A SERVICE</h2>
+	<% 3.times do %> 
+	 <col width=20>
+	 <col width=300>
+	 <col width=20>
+	 <col width=300>
+	<% end %>
+	
+	<% @rows.each do |row| %>
+	 <tr>
+	  <% row.each do |service| %>
+	  <td></td>
+	  <td width="120" height="50" class="button blue bigrounded"><%= link_to( service.name.upcase, service.permalink ) %></td>
+	  <% end %>
+	 </tr>
+	<% end %>	 
+</table>
+<br>
+<p align="center"><%= link_to( @nav, @page ) %></p>

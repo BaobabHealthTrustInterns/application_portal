@@ -1,5 +1,4 @@
-<table border=0 width=250 style='table-layout:fixed'>
-	</br>
+<table border=0 width=250 style='table-layout:fixed'></br>
 	<h2 style="margin-left: 50px;">SELECT A SERVICE</h2>
 	<% 3.times do %> 
 	 <col width=20>
@@ -8,14 +7,26 @@
 	 <col width=300>
 	<% end %>
 	
-	<% @rows.each do |row| %>
-	 <tr>
-	  <% row.each do |service| %>
-	  <td></td>
-	  <td width="120" height="50" class="button blue bigrounded"><%= link_to( service.name.upcase, service.permalink ) %></td>
-	  <% end %>
-	 </tr>
-	<% end %>	 
+			<% @rows.each do |row| %>
+	 			<tr>
+	 				<% row.each do |service| %>
+	 			<td></td>
+	 				<td width="120" height="50" class="button blue bigrounded">
+					<a class = "button1"<%= link_to( service.name, service.permalink ) %></td>
+	  				<% end %>
+	 			</tr>
+			<% end %>	 
 </table>
 <br>
-<p align="center"><%= link_to( @nav, @page ) %></p>
+	<p align="right"><%= link_to( @nav, @page) %></p>
+
+	<div5  align = "right">
+		<footer>
+			<nav>
+     				 <%= link_to ("admin home",:controller=>'admin_users',:action=>'sign_in')%>
+			</nav>
+		</footer>
+	</div5>
+
+
+

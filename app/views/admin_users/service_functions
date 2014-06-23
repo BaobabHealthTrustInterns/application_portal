@@ -1,0 +1,22 @@
+<html><center>
+	<h2>services that admin can do </h2>
+		<table class = "menu" border=0 position="center">
+	  		<tr class = "header">
+	     			<th>service name</th>
+	     			<th>service url_path
+	     			<th>service functions
+	     
+	  		</tr>
+	  			<% @services.each do |subject| %>
+	  		<tr class= " <% cycle('odd','even')%>">
+				<td><%= subject.name %></td>
+				<td><%= subject.permalink %></td>
+				<td><a class="button"<%= link_to ("edit service" ,:controller=>'services',:action=> 'edit')%></td></a>
+				<td><a class="button"<%= link_to ("show service" ,:controller=>'services',:action=> 'show')%></td></a>
+		
+
+			</tr>
+	   			<% end %>
+		</table>
+		
+</html>

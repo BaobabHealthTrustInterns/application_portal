@@ -1,0 +1,28 @@
+<html>
+
+		<div class="services">
+			<HEADER><h>ADMIN PAGE</H></HEADER><BR/>
+				<SPAN ID="SERVICES" CLASS=MENU STYLE="CENTER:20PX;MIDDLE:-90PX">
+
+				</SPAN>
+
+					<a class = "button" <%= link_to "SERVICES FUNCTIONS", :controller => "admin_users", :action => "service_functions" %></a><br>
+					<a class = "button" <%= link_to "GENERATE REPORT",:controller => "admin_users",:action => "reports" %></a></a><br>
+					<a class = "button" <%= link_to "VIEW STATISTICS", :controller => "services", :action => "new" %></a></a><br>
+					<a class = "button" <%= link_to "OTHER ADMIN FUNCTIONS", :controller => "services", :action => "new" %></a><br>
+		</div>
+
+<br><br>
+		<div1 align="right">
+			<footer align ="right">
+					<a class ="button" <%= link_to "SERVICES", :controller => "services", :action => "list" %></a>
+
+		
+			<nav>
+     				 <%= link_to ("admin home",:controller=>'admin_users',:action=>'sign_in')%>
+			</nav>
+		
+	
+			</footer>
+		</div1>
+</html>

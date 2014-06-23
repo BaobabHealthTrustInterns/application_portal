@@ -1,20 +1,45 @@
 class AdminUsersController < ApplicationController
-  def new
-  end
+ 
+	def admin_page
+	
+	@usernames = AdminUser.all
+	end
 
-  def show
-  end
+	def sign_in
+	render 'sign_in'
+	
+	end
 
-  def edit
-  end
+	def create
+	
+        @admin_user = AdminUser.new(params[:admin_user])
+       
+        if @admin_user.save   
+ 	redirect_to (:action => 'list')
+        else 
+          render 'create'
+	end
+	end
 
-  def list
-  end
+        def show
+	
+	@admin_users = AdminUser.find_by_first_name(params[:admin_user])
 
-  def functions
-  end
+	end
 
-  def delete
-  end
+	def new
+	#@admin_users = AdminUser.all
+	@admin_user = AdminUser.new
+	end
 
+        def list
+	@admin_users = AdminUser.order("admin_users.username DESC")
+	end
+
+	def service_functions
+	@services = Service.order
+	end
+
+	def reports
+	end
 end

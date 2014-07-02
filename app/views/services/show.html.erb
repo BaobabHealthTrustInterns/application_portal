@@ -1,2 +1,28 @@
+<table border= 1>
+	<tr>
+		<th>service name</th>
+		<th>service id</th>
+		<th>service permalink
+		
+	</tr>
+	<tr>
+		<TD>
+			<%= @service.name%>
+		</td>
 
+		<TD>
+			<%= @service.id%>
+		</td>
+
+		<TD>
+			<%= @service.permalink%>
+		</td>
+	</tr>
+</table>
+<div>
+<div align="right">
+	<footer>
+		<%= link_to ("BACK",:controller=>'admin_users',:action=>'service_functions')%>
+	</footer>
+</div>
 

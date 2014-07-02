@@ -7,16 +7,21 @@
 	     			<th>service functions
 	     
 	  		</tr>
-	  			<% @services.each do |subject| %>
+	  			<% @services.each do |service_name| %>
 	  		<tr class= " <% cycle('odd','even')%>">
-				<td><%= subject.name %></td>
-				<td><%= subject.permalink %></td>
-				<td><a class="button"<%= link_to ("edit service" ,:controller=>'services',:action=> 'edit')%></td></a>
-				<td><a class="button"<%= link_to ("show service" ,:controller=>'services',:action=> 'show')%></td></a>
+				<td><%= service_name.name %></td>
+				<td><%= service_name.permalink %></td>
+				<td><a class="button"<%= link_to ("edit service" ,:controller=>'services',:action=> 'edit',:id=>service_name.id)%></td></a>
+				<td><a class="button"<%= link_to ("show service" ,:controller=>'services',:action=> 'show',:id=>service_name.id)%></td></a>
 		
 
 			</tr>
 	   			<% end %>
 		</table>
-		
+<div>
+	<footer>
+		<%= link_to ("BACK",:controller=>'admin_users',:action=>'admin_page')%>
+		<%= link_to ("LOG OUT",:controller=>'services',:action=>'list')%>
+	</footer>
+</div>
 </html>

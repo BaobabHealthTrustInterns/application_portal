@@ -1,5 +1,3 @@
-
-
 <HEADER>
 	<h2> ADMIN SIGN IN PAGE </h2></HEADER>
 		<div class = " SIGN_IN">
@@ -20,9 +18,12 @@
 
 		<div class ="form=buttons">
 				<%= submit_tag("log in") %>
-<br/><br/>
+<br/>
 		</div>
 			<% end %>
 		</div>
-
-
+<div align="right">
+	<footer>
+		<%= link_to ("BACK",:controller=>'services',:action=>'list')%>
+	</footer>
+</div>

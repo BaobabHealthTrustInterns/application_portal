@@ -1,13 +1,11 @@
 class AdminUsersController < ApplicationController
  
 	def admin_page
-	
 	@usernames = AdminUser.all
 	end
 
 	def sign_in
 	render 'sign_in'
-	
 	end
 
 	def create
@@ -28,7 +26,6 @@ class AdminUsersController < ApplicationController
 	end
 
 	def new
-	#@admin_users = AdminUser.all
 	@admin_user = AdminUser.new
 	end
 
@@ -37,7 +34,7 @@ class AdminUsersController < ApplicationController
 	end
 
 	def service_functions
-	@services = Service.order
+	@services = Service.order("services.name DESC")
 	end
 
 	def reports

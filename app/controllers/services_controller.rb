@@ -1,71 +1,96 @@
 class ServicesController < ApplicationController
 
-  def new
-	@service = Service.new
-  end
+  before_filter :confirm_logged_in, :except => [:index, :more_services]
 
- def list
-	@services = Service.all
-	@services = Service.order("services.name ASC")
-	
-  	@page = "more"
-  	
-  	services = Service.limit(16)
-  	@row_1 = services[0..3] || Hash.new
-  	@row_2 = services[4..7] || Hash.new
-  	@row_3 = services[8..11] || Hash.new
-  	@row_4 = services[12..15] || Hash.new
+  def index
 
-  	@rows = [@row_1, @row_2, @row_3, @row_4]
+    @main_title = "select a service"
 
-  	if Service.count > 16
-  		@nav = "MORE SERVICES >>"
-	else
-		@nav = ""
-  	end
-  end
-
-  def more
-  	@nav = "<< MORE SERVICES"
-  	@page = "list"
-
-  	services = Service.all
-  	@row_1 = services[16..19] || Hash.new
-  	@row_2 = services[20..23] || Hash.new
-  	@row_3 = services[24..27] || Hash.new
-  	@row_4 = services[28..31] || Hash.new
-
-  	@rows = [@row_1, @row_2, @row_3, @row_4]
-	
-  	@services = services[16..33]
-  	render('list')
-  end
-
-  def create
-       
-        @service = Service.new(params[:service])
-              
-	if @service.save
-        redirect_to (:action=> 'list')
-	else
-	render 'create'
-	end
-  end  
-
-  def edit
-	@service = Service.find(params[:id])   
-  end
+    @services = Service.all
  
-  def update
-      @service = Service.find(params[:id])
-      if @service.update_attributes(params[:service])
-      redirect_to (:action => 'show')
-      
-      end
+    services = Service.limit(12)
+    @row_1 = services[0..3] || Hash.new
+    @row_2 = services[4..7] || Hash.new
+    @row_3 = services[8..11] || Hash.new
+    
+    @rows = [@row_1, @row_2, @row_3]
+
+    @page = "more_services"
+    if Service.count > 12
+      @img = "nav/next.png"
+      @nav = "MORE SERVICES >>"
+    else
+      @nav = ""
+    end
+
+
+  end
+
+  def more_services
+    @main_title = "select a service"
+
+    @img = "nav/back.png"
+    @nav = "<< PREVIOUS SERVICES"
+    @page = "/services"
+
+    services = Service.all
+    @row_1 = services[12..15] || Hash.new
+    @row_2 = services[16..19] || Hash.new
+    @row_3 = services[20..23] || Hash.new
+
+    @rows = [@row_1, @row_2, @row_3]
+
+    @services = services[12..23]
+    render('index')
   end
 
   def show
-	@service = Service.find(params[:id])
+    @img = "nav/back.png"
+    @service = Service.find(params[:id])
+    @main_title = "displaying #{@service.name} service info"
   end
- 
+
+  def new
+    @main_title = "add a new service"
+    @service = Service.new
+  end
+
+  def edit
+    @service = Service.find(params[:id])
+    @main_title = "edit #{@service.name} service"
+  end
+
+  def create
+    @service = Service.new(params[:service])
+
+    if @service.save
+      flash[:notice] = "Successfully added a new service!"
+      redirect_to @service
+    else
+      render('new')
+    end
+  end
+
+  def update
+    @service = Service.find(params[:id])
+
+    if @service.update_attributes(params[:service])
+      flash[:notice] = "Successfully updated service!"
+      redirect_to(@service, :id => @service.id)
+    else
+      render('edit')
+    end
+  end
+
+  def delete
+    @main_title = "delete a service"
+    @service = Service.find(params[:id])
+  end
+
+  def destroy
+    Service.find(params[:id]).destroy
+    flash[:notice] = "Successfully deleted service!"
+    redirect_to(services_path)
+  end
+
 end

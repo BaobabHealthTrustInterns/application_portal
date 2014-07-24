@@ -1,0 +1,49 @@
+<% @main_title = "list of administrators" %>
+
+<% if current_user %>
+<p style="position:fixed; top:75%; left:72%;"><%= link_to 'UPDATE MY PROFILE', edit_user_path(current_user), :class => "button pvb" %></p>
+<% end %>
+<% if User.count == 0 %>
+    </br></br></br></br></br></br></br></br></br>
+    <p style="color:darkorange; text-align: center; font-size: 20px;"><%= "There are currently no administrators in the database!" %></p>
+<% else %>
+
+<table style="table-layout: fixed; width: 100%; padding-top:5%; line-height: 5px;">
+  <tr>
+    <th width="6%"></th>
+    <th width="20%">First name</th>
+    <th width="20%">Last name</th>
+    <th width="20%">Email</th>
+    <td width="15%"></td>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  
+<% x = 1 %>
+<% @users.each do |user| %>
+    <tr>
+      <td>&nbsp</td>
+  </tr>
+  <tr>
+    <td width="6%"></td>
+    <td width="20%"><%= user.first_name %></td>
+    <td width="20%"><%= user.last_name %></td>
+    <td width="20%"><%= user.email %></td>
+    <td width="15%"></td>
+    <td>
+   
+    </td>
+  </tr>
+<% end %>
+</table>
+</div>
+<br>
+<div style="position: fixed; top: 68%; left: 8%;"><%= will_paginate @users, :class => "paginate" %></div>
+
+<br />
+
+<% end %>
+<p style="position:fixed; top:75%; left: 8.9%;">
+    <%= link_to 'REGISTER ADMIN', new_user_path, :class => "button pvb" %>
+</p>

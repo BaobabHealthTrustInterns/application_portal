@@ -1,0 +1,23 @@
+<% @main_title = "current location details" %>
+
+<div style="position: fixed; top: 32%; left: 15%; right: 14%; line-height: 65px;">
+<table>
+  <tr>
+    <th>Facility</th>
+    <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+    <td><%= @location.facility %></td>
+  </tr>
+  <tr>
+    <th>District</th>
+    <th></th>
+    <td><%= @location.district %></td>  
+  </tr>
+  <tr>
+    <th>Description</th>
+    <th></th>
+    <td style="position:fixed; top:53.3%; left:32%; right:16.5%;"><%= @location.description %></td>
+  </tr>
+</table>
+</div>
+<br />
+<div style="position: fixed; top: 74%; left: 42%;"><%= link_to 'CHANGE DETAILS', edit_location_path(@location), :class => "button pvb" %></div>

@@ -1,0 +1,22 @@
+<div style="margin-left: 150px; padding-top: 90px;">
+<table>
+	
+	<tr>
+		<td><b><u>Service Name</u></b></td>
+		<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+		<td><b><u>Service Url</u></b></td>
+	</tr>
+	<tr>
+		<td><p><%= @service.name %></p></td>
+		<td></td>
+		<td><p><%= @service.permalink %></p></td>
+	</tr>
+</table>
+
+<%= link_to 'Edit', edit_service_path(@service), :class => 'button smaller under' %>
+<%= link_to 'Destroy', {:action => 'delete', :id => @service.id} , :class => 'button smaller under' %>
+
+</div>
+
+<% @nav = "<< BACK TO SERVICES" %>
+<% @page = "/services" %>

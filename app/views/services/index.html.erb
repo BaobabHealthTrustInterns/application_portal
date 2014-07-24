@@ -1,0 +1,59 @@
+<br>
+<% sud = "button smaller under" %>
+<% @homepage = "ADMIN SECTION" %>
+<% @adlink = "/sessions/login" %>
+
+<% if Service.count == 0 %>
+    </br></br></br></br></br></br></br></br></br>
+    <p style="color:darkorange; text-align: center;"><%= "There are currently no services in the database!" %></p>
+<% end %>
+
+<table border=0>
+
+  <% 4.times do %> 
+    <col width=250>
+  <% end %>
+
+  <% @rows.each do |row| %>
+   <tr>
+    <% row.each do |service| %>
+    <td ><%= link_to service.name.upcase, service.permalink, :class => "button medium blue" %>
+    <div align="center">
+
+<!-- When admin has logged in show these buttons under each service -->
+      <% if current_user %>
+        <%= link_to 'D', service_url(:id => service.id), :class => sud %>
+        <%= link_to 'U', edit_service_path(service), :class => sud %>
+        <%= link_to 'X', { :action => 'delete', :id => service.id }, :class => sud %>
+      <% else %>
+        <p class=".space">&nbsp</p>
+      <% end %>
+<!-- Ends here -->
+
+    </div>
+      </td>
+    <% end %>
+    </tr>
+  <% end %> 
+</table>
+
+<!-- When admin has logged in show these buttons under each service -->
+<% if current_user %>
+  <div style="position:fixed; top:10.5%; left:6.9%; pointer-events:none;">
+        <table height="100px;" style="position: fixed; top: 84%; left: 6%; background-color:white; border-radius:5px;">
+          <tr>
+            <td colspan="3"><u>Button description</u></td>
+          <tr>
+            <td><%= link_to 'D', "#", :class => sud %>Display</td> 
+            <td><%= link_to 'U', "#", :class => sud %>Update</td>
+            <td><%= link_to 'X', "#", :class => sud %>Delete</td>
+          </tr>
+
+        </table>
+    </div>
+    <p style="position: fixed; top:77%; left:76.5%;%;">
+          <%= link_to 'ADD NEW', new_service_path, :class => "button pvb" %>
+    </p>
+<% end %>
+
+<!-- Ends here -->

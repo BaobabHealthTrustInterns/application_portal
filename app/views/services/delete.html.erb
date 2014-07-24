@@ -1,0 +1,10 @@
+<div style="position:fixed; top:40%; left:30%;">
+<%= form_for(:service, :url => {:action => 'destroy', :id => @service.id}) do |f| -%>
+	<p>Do you want to permanently delete this service?</p>
+	<p style="margin-top:30px; text-align:center; font-weight:bold; font-size: 28px; "><%= @service.name %></p>
+	<p align="center"><%= submit_tag("CONFIRM DELETE") %><%= link_to "CANCEL", @service, :class => 'button small under pvb f' %></p>	
+<% end %>
+
+<% @nav = "SHOW ALL SERVICES" %>
+<% @page = services_path %>
+</div>

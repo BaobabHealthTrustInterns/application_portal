@@ -1,0 +1,28 @@
+<table>
+  <%= form_for(:service, :url => {:action => @action, :id => @service.id }) do |f| %>
+      <tr><br><br><br><br><br><%= f.label :name %><br><br></tr>
+      <tr><%= f.text_field :name %><br><br></tr>
+      <tr><%= f.label :permalink %><br><br></tr>
+      <tr><%= f.text_field :permalink %></tr>
+</table>
+
+<div style="margin-left: 320px; ">
+      <%= f.submit %>
+<% end %>
+</div>
+
+<% if @service.errors.any? %>
+  <div style="position:fixed; top: 65.5%; left:10%; color:red;">
+    <p><%= pluralize(@service.errors.count, "error") %> prohibited this user from being saved:</p>
+
+    <ul>
+    <% @service.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<div style="position:fixed; top:86.5%; left: 8%;">
+    <%= link_to 'BACK TO SERVICES', services_path, :class => "button pvb" %>
+</div>

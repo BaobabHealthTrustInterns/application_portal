@@ -1,0 +1,57 @@
+<% @main_title = "administrator sign up" %>
+
+<% if @user.errors.any? %>
+  <div style="position:fixed; top: 62.5%; left:10%; color:red;">
+    <p><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</p>
+
+    <ul>
+    <% @user.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @user do |f| %>
+ <table style="table-layout:fixed; position:fixed; left: 0%; top:30%;" border="0">
+ <tr>
+ 	<td width="6%"></td>
+ 	<th width="15%"><%= f.label :first_name %></th> 
+ 	<td width="28%"><%= f.text_field :first_name, :size => 15  %></td>
+ 	<th width="20%">&nbsp&nbsp&nbsp&nbsp<%= f.label :last_name %></th>
+ 	<td width="25%"><%= f.text_field :last_name, :size => 15  %></td>
+ 	<td width="6%"></td>
+ </tr>
+ <tr>
+ 	<td width="6%"></td>
+ 	<th width="15%"><%= f.label :username %></th>
+ 	<td width="23%"><%= f.text_field :username, :size => 15  %></td>
+ 	<td></td>
+ 	<td></td>
+ 	<td width="62%"></td>
+ </tr>
+ <tr>
+ 	<td width="6%"></td>
+  	<th width="15%"><%= f.label :password %></th>
+ 	<td width="23%"><%= f.password_field :password, :size => 15 %></td>
+  	<th width="20%">&nbsp&nbsp&nbsp&nbsp<%= f.label :confirmation %></th>
+ 	<td width="20%"><%= f.password_field :password_confirmation, :size => 15 %></td>
+ 	<td width="22%"></td>
+ </tr>
+ <tr>
+ 	<td width="6%"></td>
+  	<th width="15%"><%= f.label :email %></th>
+ 	<td colspan="2" width="50%"><%= f.text_field :email %></td>
+ 	<td width="0%"></td>
+ 	<td width="0%"></td>
+ 	<td width="29%"></td>
+ </tr>
+  </table>
+  <div style="position: fixed; top:75%; left:75%;">
+	<%= f.submit "sign up" %>
+</div>
+
+<% end %>
+
+<% @nav = "<< PREVIOUS PAGE" %>
+<% @page = users_path %>

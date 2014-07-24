@@ -1,0 +1,22 @@
+<% @main_title = "administrator details" %>
+
+<div style="margin-left: 150px; padding-top: 90px;">
+<p>
+  <b>First name:</b>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user), :class => "button smaller under" %>
+<%= link_to 'Back', users_path, :class => "button smaller under" %>
+</div>

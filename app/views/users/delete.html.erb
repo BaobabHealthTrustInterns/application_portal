@@ -1,0 +1,12 @@
+<% @main_title = "delete administrator" %>
+
+<div style="margin-left: 150px; padding-top: 90px;">
+<%= form_for(:user, :url => {:action => 'destroy', :id => @user.id}) do -%>
+	<p>Do you want to permanently remove this admin?</p>
+	<p><%= @user.first_name + " " + @user.last_name %></p>
+	<p><%= submit_tag("Confirm delete") %></p>
+<% end %>
+
+<% @nav = "GO TO PREVIOUS PAGE" %>
+<% @page = users_path %>
+</div>

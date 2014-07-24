@@ -1,28 +1,22 @@
-<table border= 1>
+<div style="margin-left: 150px; padding-top: 90px;">
+<table>
+	
 	<tr>
-		<th>service name</th>
-		<th>service id</th>
-		<th>service permalink
-		
+		<td><b><u>Service Name</u></b></td>
+		<td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+		<td><b><u>Service Url</u></b></td>
 	</tr>
 	<tr>
-		<TD>
-			<%= @service.name%>
-		</td>
-
-		<TD>
-			<%= @service.id%>
-		</td>
-
-		<TD>
-			<%= @service.permalink%>
-		</td>
+		<td><p><%= @service.name %></p></td>
+		<td></td>
+		<td><p><%= @service.permalink %></p></td>
 	</tr>
 </table>
-<div>
-<div align="right">
-	<footer>
-		<%= link_to ("BACK",:controller=>'admin_users',:action=>'service_functions')%>
-	</footer>
+
+<%= link_to 'EDIT', edit_service_path(@service), :class => 'button smaller under' %>
+<%= link_to 'DELETE', {:action => 'delete', :id => @service.id} , :class => 'button smaller under' %>
+
 </div>
 
+<% @nav = "<< BACK TO SERVICES" %>
+<% @page = "/services" %>

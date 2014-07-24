@@ -1,0 +1,25 @@
+<%= form_for(:user, :url => {:action => @action, :id => @user.id }) do |f| %>
+  <table>
+  <p style="position: fixed; top:30%; left:13%;">
+   <%= f.label :first_name %> &nbsp&nbsp
+   <%= f.text_field :first_name, :size => 15  %>&nbsp&nbsp
+   <%= f.label :last_name %> &nbsp&nbsp
+   <%= f.text_field :last_name, :size => 15  %>
+ </p>
+ <p style="position: fixed; top:40%; left:13%;">
+   <%= f.label :username %> &nbsp&nbsp&nbsp
+   <%= f.text_field :username, :size => 15  %>
+ </p>
+ <p style="position: fixed; top:50%; left:13%;">
+    <%= f.label :password %> &nbsp&nbsp&nbsp&nbsp
+    <%= f.password_field :password, :size => 15 %> &nbsp&nbsp
+ </p>
+  <p style="position: fixed; top:60%; left:13%;">
+    <%= f.label :email %> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+    <%= f.text_field :email %>
+ </p>
+  <p style="position: fixed; top:71%; left:48%;">
+  <%= f.submit @submit %>
+ </p>
+<% end %>
+</table>

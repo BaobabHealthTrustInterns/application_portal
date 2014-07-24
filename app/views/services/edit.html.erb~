@@ -1,0 +1,7 @@
+<% @action = "update" %>
+<% @nav = "<< PREVIOUS PAGE" %>
+<% @page = service_url(:id => @service.id) %>
+
+<div style="position:fixed; top:20%; left:30%;">
+<%= render 'form' %>
+</div>

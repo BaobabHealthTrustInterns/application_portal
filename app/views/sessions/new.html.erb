@@ -1,20 +1,20 @@
 <% @homepage = "GO TO HOMEPAGE" %>
 <% @link = "services" %>
 
-<div style="position:fixed; top:39%; left:30%; text-align:center;">
-<%= form_tag sessions_path do %>
-<td>
-<tr>
-<p><%= label_tag :username %><br/>
-<%= text_field_tag :username, params[:username] %>
-</p>
-<p><%= label_tag :password %><br/>
-<%= password_field_tag :password, params[:password]  %>
-</p>
-</tr>
-</td>
-<p>
- <%= submit_tag "LOG IN" %>
-</p>
-<% end %>
+<div style="position: absolute; padding-left: 200px; top: 300px; text-align: center;">
+	<%= form_tag sessions_path do %>
+		<td>
+			<tr>
+				<p><%= label_tag :username %><br/>
+					<%= text_field_tag :username, params[:username] %>
+				</p>
+				<p><%= label_tag :password %><br/>
+					<%= password_field_tag :password, params[:password]  %>
+				</p>
+			</tr>
+		</td>
+		<p>
+		 	<%= submit_tag "LOG IN" %>
+		</p>
+	<% end %>
 </div>

@@ -1,43 +1,51 @@
-<% @main_title = "update location details" %>
+<% @main_title = "Update location details" %>
 
-<div style="position:fixed; top:22%; left:11%;">
-<%= form_for(:location, :url => {:action => "update", :id => @location.id }) do |f| %>
-  <table width="100%">
-  <div class="field">
-    <tr>
-      <td width="12%"><%= f.label :facility %></td>
-      <td width="50%">&nbsp&nbsp&nbsp</td>
-      <td width="38%"><%= f.text_field :facility %></td>
-    </tr>
-  </div>
-    <tr>
-      <td>&nbsp</td>
-    </tr>
-  <div class="field">
-    <tr>
-      <td width="12%"><%= f.label :district %></td>
-      <td width="50%">&nbsp&nbsp&nbsp</td>
-      <td width="38%"><%= f.text_field :district %></td>
-    </tr>
-  </div>
-    <tr>
-      <td>&nbsp</td>
-    </tr>
-  <div class="field">
-    <tr>
-      <td width="12%"><%= f.label :description %></td>
-      <td width="50%">&nbsp&nbsp&nbsp</td>
-      <td width="38%"><%= f.text_area :description, :size => "36x5" %><td>
-    </tr>
-  </div>
-</div>
-  <div class="actions" style="position:fixed; top:77%; left:36%;">
-    <%= f.submit %>
-  </div>
+<div style="margin: auto; padding: 45px;">
+  <%= form_for(:location, :url => {:action => "update", :id => @location.id }) do |f| %>
+    
+  <table style="width: 600px; position: fixed; top: 250px; text-align: left">
+    <div class="field">
+      <tr>
+        <td width="12%"><%= f.label :facility %></td>
+        <td width="50%">&nbsp;&nbsp;&nbsp;</td>
+        <td width="38%"><%= f.text_field :facility %></td>
+      </tr>
+    </div>
 
-<% end %>
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    
+    <div class="field">
+      <tr>
+        <td width="12%"><%= f.label :district %></td>
+        <td width="50%">&nbsp;&nbsp;&nbsp;</td>
+        <td width="38%"><%= f.text_field :district %></td>
+      </tr>
+    </div>
+    
+    <tr>
+      <td>&nbsp;</td>
+    </tr>
+    
+    <div class="field">
+      <tr>
+        <td width="12%"><%= f.label :description %></td>
+        <td width="50%">&nbsp;&nbsp;&nbsp;</td>
+        <td width="38%"><%= f.text_area :description, :size => "36x5" %><td>
+      </tr>
+    </div>
+  
+    <div class="actions">
+      <tr>
+        <td>
+          <%= f.submit %> 
+          <%= link_to 'Cancel', locations_path %>
+        </td>
+      </tr>
+    </div>
+
+    <% end %>
+  
+  </table>
 </div>
-</table>
-<div class="actions" style="position:fixed; top:77%; left:50.8%;">
-    <%= link_to 'Cancel', locations_path %>
-  </div>

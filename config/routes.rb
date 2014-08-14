@@ -13,7 +13,9 @@ ApplicationPortal::Application.routes.draw do
   get 'reports/display'
 
   get 'reports/trial'
-
+  get 'samples/opd'
+  post 'samples/opd'
+  resources :samples
   resources :users
   resources :sessions
 

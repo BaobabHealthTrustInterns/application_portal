@@ -1,7 +1,7 @@
-<% @main_title = "list of administrators" %>
+<% @main_title = "List of administrators" %>
 
 <% if current_user %>
-<p style="position:fixed; top:75%; left:72%;"><%= link_to 'UPDATE MY PROFILE', edit_user_path(current_user), :class => "button pvb" %></p>
+<p style="top:75%;"><%= link_to 'UPDATE MY PROFILE', edit_user_path(current_user), :class => "button pvb" %></p>
 <% end %>
 <% if User.count == 0 %>
     </br></br></br></br></br></br></br></br></br>
@@ -23,7 +23,7 @@
 <% x = 1 %>
 <% @users.each do |user| %>
     <tr>
-      <td>&nbsp</td>
+      <td>&nbsp;</td>
   </tr>
   <tr>
     <td width="6%"></td>

@@ -1,23 +1,22 @@
-<% @main_title = "current location details" %>
+<% @main_title = "Current location details" %>
 
-<div style="position: fixed; top: 32%; left: 15%; right: 14%; line-height: 65px;">
-<table>
+<div style="margin: auto; padding: 45px;">
+<table style="position: fixed; top: 280px; line-height: 50px; text-align: left; width: 700px;">
   <tr>
-    <th>Facility</th>
-    <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+    <th style="width:150px;">Facility</th>
     <td><%= @location.facility %></td>
   </tr>
   <tr>
-    <th>District</th>
-    <th></th>
+    <th style="width:150px;">District</th>
     <td><%= @location.district %></td>  
   </tr>
   <tr>
-    <th>Description</th>
-    <th></th>
-    <td style="position:fixed; top:53.3%; left:32%; right:16.5%;"><%= @location.description %></td>
+    <th style="width:150px;">Description</th>
+    <td style="vertical-align: top;"><%= @location.description %></td>
   </tr>
 </table>
 </div>
 <br />
-<div style="position: fixed; top: 74%; left: 42%;"><%= link_to 'CHANGE DETAILS', edit_location_path(@location), :class => "button pvb" %></div>
+<div style="position: fixed; top: 550px; padding-left: 45px;">
+  <%= link_to 'CHANGE DETAILS', edit_location_path(@location), :class => "button pvb" %>
+</div>

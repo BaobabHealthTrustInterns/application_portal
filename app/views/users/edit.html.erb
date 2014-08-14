@@ -1,6 +1,6 @@
 <% user = User.find(params[:id]) %>
 
-<% @main_title = "update #{user.username} profile" %>
+<% @main_title = "Update #{user.username} profile" %>
 
 <% if @user.errors.any? %>
   <div style="position:fixed; top: 65%; left:10%; color:red;">
@@ -20,7 +20,7 @@
  	<td width="6%"></td>
  	<th width="15%"><%= f.label :first_name %></th> 
  	<td width="28%"><%= f.text_field :first_name, :size => 15  %></td>
- 	<th width="20%">&nbsp&nbsp&nbsp&nbsp&nbsp<%= f.label :last_name %></th>
+ 	<th width="20%">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= f.label :last_name %></th>
  	<td width="25%"><%= f.text_field :last_name, :size => 15  %></td>
  	<td width="6%"></td>
  </tr>
@@ -34,9 +34,9 @@
  </tr>
  <tr>
  	<td width="6%"></td>
-  	<th width="15%"><%= f.label :password %>&nbsp&nbsp&nbsp&nbsp</th>
+  	<th width="15%"><%= f.label :password %>&nbsp;&nbsp;&nbsp;&nbsp;</th>
  	<td width="23%"><%= f.password_field :password, :size => 15 %></td>
-  	<th width="20%">&nbsp&nbsp&nbsp&nbsp<%= f.label :confirmation %>&nbsp&nbsp</th>
+  	<th width="20%">&nbsp;&nbsp;&nbsp;&nbsp;<%= f.label :confirmation %>&nbsp;&nbsp;</th>
  	<td width="20%"><%= f.password_field :password_confirmation, :size => 15 %></td>
  	<td width="22%"></td>
  </tr>

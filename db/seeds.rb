@@ -15,7 +15,7 @@ Location.create(:facility => 'KCH', :district => 'Lilongwe', :description => 'Ka
 
 #puts ""
 
-puts "Loading default adminstrator"
+puts "Loading default administrator"
 User.create(:username => "team_portal", :password => "groupsix", :email => "example@email.com", :first_name => "group", :last_name => "two")
 
 puts ""
